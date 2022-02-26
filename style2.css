@@ -1,0 +1,96 @@
+* {
+    font-family: "Mustica pro SemBd";
+}
+html {
+    background-image: linear-gradient( #fda700, #df4c8b, #852f65, #085586);
+    height: 100%;
+}
+h1 {
+    font-size: 5vw;
+}
+.flexBox {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+    display: grid;
+    grid-gap: 10%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 500px;
+    grid-auto-columns: 700px;
+}
+
+.card {
+    z-index: 1;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 20px;
+    background: white;
+
+}
+.card_1::after {
+    border-radius: 50%;
+    content: "";
+    z-index: -1;
+    position: absolute;
+    background: darkorange;
+    left: -25%;
+    width: 150%;
+    height: 100%;
+    top: -65%;
+}
+.card_2::after {
+    border-radius: 50%;
+    content: "";
+    z-index: -1;
+    position: absolute;
+    background: crimson;
+    left: -25%;
+    width: 150%;
+    height: 100%;
+    top: -65%;
+}
+.card_3::after {
+    border-radius: 50%;
+    content: "";
+    z-index: -1;
+    position: absolute;
+    background: purple;
+    left: -25%;
+    width: 150%;
+    height: 100%;
+    top: -65%;
+}
+
+.card_1 {
+    position: relative;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.card_2 {
+    position: relative;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.card_3 {
+    position: relative;
+    overflow: hidden;
+    transition: 1s;
+}
+.card_1:hover {
+    transition: 1s;
+
+}
+.card_2:hover {
+    transition: 1s;
+}
+.card_3:hover {
+    transition: 1s;
+}
+/*.card:hover ~ div {*/
+/*    filter: blur(10px);*/
+/*}*/

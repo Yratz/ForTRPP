@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style2.css">
+    <title>Title</title>
+    <script>
+        // var n = 0;
+        function blurCards(n) {
+            let cards = document.getElementsByClassName("flexBox")[0].children;
+            for (let i = 0; i < cards.length; i++) {
+                if (n != i) {
+                    cards[i].style.filter = "blur(10px)";
+                    cards[i].style.transform = "scale(0.9)";
+                }
+                else {
+                    cards[i].style.transform = "scale(1.2)";
+                }
+            }
+        }
+        function unblurCards() {
+            var cards = document.getElementsByClassName("flexBox")[0].children;
+            for (var i = 0; i < cards.length; i++) {
+                cards[i].style.filter = "none";
+                cards[i].style.transform = "scale(1)";
+            }
+        }
+    </script>
+
+</head>
+<body class="body">
+<div class="flexBox">
+    <div class="card card_1" onmouseover="blurCards(0)" onmouseout="unblurCards()">
+            <h1>01</h1>
+            <div style="color: black;margin: 20px; text-align: center">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
+                <br><br><button style="padding: 10px; color: white; background: darkorange; border-radius: 30px;border: 0; width: 30%;font-size: 20px">More</button>
+            </div>
+    </div>
+    <div class="card card_2" onmouseover="blurCards(1)" onmouseout="unblurCards()">
+        <h1>02</h1>
+        <div style="color: black;margin: 20px; text-align: center">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
+            <br><br><button style="padding: 10px; color: white; background: crimson; border-radius: 30px;border: 0; width: 30%;font-size: 20px">More</button>
+        </div>
+    </div>
+    <div class="card card_3" onmouseover="blurCards(2)" onmouseout="unblurCards()">
+        <h1>03</h1>
+        <div style="color: black;margin: 20px; text-align: center">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
+            <br><br><button style="padding: 10px; color: white; background: purple; border-radius: 30px;border: 0; width: 30%;font-size: 20px">More</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
